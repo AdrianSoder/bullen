@@ -2,8 +2,10 @@
 
 <head>
     <title>
+    <!-- vad som ska stå i webbläsarens header/tabens namn-->
         Café Bullen
     </title>
+<!-- länkar och standard inställningar för html koden-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/bullen_nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,13 +13,14 @@
 </head>
 
 <body>
+<!-- navigationen, olika sidor på webbplatsen-->
     <div class="topnav" id="bullennav">
         <a href="Index.html">Café Bullen</a>
         <a href="meny.html">Meny</a>
         <a href="bilder.html">bilder</a>
         <a href="omoss.html">Om Oss</a>
         <a href="kontakt.html">Kontakt</a>
-
+    <!-- hänvisning till mitt script så att html koden och datorerna vet vad som ska hända och göras-->
         <a href="javascript:void(0);" class="icon" onclick="navigationbar()">
             <i class="fa fa-bars"></i>
         </a>
@@ -25,6 +28,18 @@
     <h1>Kontakt</h1>
     <div class="sid4">
 
+<!--script för en dropdown navigation på mindre skärmar (såsom mobil)-->
+        <script>
+            function navigationbar() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        
     </div>
 </body>
 
